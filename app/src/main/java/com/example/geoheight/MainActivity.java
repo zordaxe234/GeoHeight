@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                     }
                 }
         );
-        viewGroup.addView(button);
+        linearLayout.addView(button);
 
         initGPS();
 
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
         }
 
-        sensorManager.registerListener((SensorEventListener) this, sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE), SensorManager.SENSOR_DELAY_NORMAL);
+        sensorManager.registerListener(this, sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE), SensorManager.SENSOR_DELAY_NORMAL);
 
 
     }
